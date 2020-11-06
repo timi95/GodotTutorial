@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Action RPG Resources/World/Bush.png" type="Texture" id=1]
+[ext_resource path="res://Action RPG Resources/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=3]
+
+[node name="World" type="Node2D"]
+position = Vector2( 5.49329, 1.58319 )
+
+[node name="Bush" type="Sprite" parent="."]
+position = Vector2( 78.6701, 116.721 )
+scale = Vector2( 1.47491, 1.59553 )
+texture = ExtResource( 1 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 263.236, 136.978 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" type="Sprite" parent="Player"]
+position = Vector2( 0.133484, -0.451172 )
+texture = ExtResource( 3 )
+hframes = 60
+__meta__ = {
+"_edit_group_": true
+}
