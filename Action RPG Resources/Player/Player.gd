@@ -21,7 +21,7 @@ func player_movement(delta):
 		print("velocity=>",velocity)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	move_and_collide(velocity * delta)	
+	velocity = move_and_slide(velocity)	
 
 func _physics_process(delta):
 	player_movement(delta)
